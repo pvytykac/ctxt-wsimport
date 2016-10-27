@@ -39,7 +39,7 @@ public class ReportsTest {
         end.setYYYY(calendar.get(Calendar.YEAR));
 
         // 6 months ago
-        calendar.roll(Calendar.MONTH, -6);
+        calendar.add(Calendar.MONTH, -6);
         start.setDd(calendar.get(Calendar.DATE));
         start.setMm(calendar.get(Calendar.MONTH) + 1);
         start.setYYYY(calendar.get(Calendar.YEAR));
