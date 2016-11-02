@@ -21,12 +21,12 @@ tasks.getByPath(":clean").finalizedBy 'wsimportClean'
 
 task wsimportMessaging(type: Exec) {
     workingDir "$project.rootDir/src/main/java"
-    commandLine 'wsimport', '-Xnocompile', '-keep', 'https://uk-nightly.bbconnecttxt.com/connectors/soap/messaging/txttoolsMessaging.wsdl'
+    commandLine 'wsimport', '-Xnocompile', '-Xno-addressing-databinding', '-keep', "$project.rootDir\\src\\main\\resources\\txttoolsMessaging.wsdl"
 }
 
 task wsimportAddressbook(type: Exec) {
     workingDir "$project.rootDir/src/main/java"
-    commandLine 'wsimport', '-Xnocompile', '-keep', 'https://uk-nightly.bbconnecttxt.com/connectors/soap/addressbook/txttoolsAddressbook.wsdl'
+    commandLine 'wsimport', '-Xnocompile', '-Xno-addressing-databinding', '-keep', "$project.rootDir\\src\\main\\resources\\txttoolsAddressbook.wsdl"
 }
 
 task wsimportClean(type: Delete) {

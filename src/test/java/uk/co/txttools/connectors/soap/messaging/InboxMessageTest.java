@@ -69,7 +69,7 @@ public class InboxMessageTest {
                 "&X-E3-Originating-Address=" + URLEncoder.encode(source, "utf-8") + "&X-E3-Recipients=" +
                 URLEncoder.encode(recipient, "utf-8") + "&X-E3-Data-Coding-Scheme=01&X-E3-User-Data-Header-Indicator=0";
 
-        HttpURLConnection connection = (HttpURLConnection) new URL(PROTO, HOST, PORT, CONTEXT + "/connectors/dialogueMO.jsp").openConnection();
+        HttpURLConnection connection = (HttpURLConnection) new URL(BASE_URL + "/connectors/dialogueMO.jsp").openConnection();
         connection.setDoOutput(true);
         connection.setDoInput(true);
         connection.setRequestMethod("POST");
